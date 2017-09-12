@@ -7,9 +7,9 @@ metaAlignment: center
 coverMeta: out
 date: 2017-09-12
 categories:
-- tranquilpeak
-- features
+- 雜記
+- 測試
 tags:
-- cover image
+- test
 ---
 這不就架起來了嗎
