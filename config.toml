@@ -31,9 +31,8 @@ canonifyurls = true
   archive = "archives"
 
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
+  name = "Kigo Chen"
+  job = "Data Scientist"
   location = "Taiwan"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "akigox@gmail.com"
