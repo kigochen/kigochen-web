@@ -25,3 +25,10 @@ git push origin master
 
 # Come Back
 cd ..
+
+# update web 
+git add . 
+
+git commit -m "$msg"
+
+git push
