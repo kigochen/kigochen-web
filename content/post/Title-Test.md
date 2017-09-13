@@ -7,8 +7,8 @@ metaAlignment: center
 coverMeta: out
 date: 2017-09-12
 categories:
-- 雜記
-- 測試
+- Notes
+- testing
 tags:
 - test
 ---
