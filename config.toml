@@ -35,7 +35,7 @@ canonifyurls = true
   job = "Data Scientist"
   location = "Taiwan"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "akigox@gmail.com"
+  gravatarEmail = "kigo134679@hotmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "hhttps://github.com/kigochen/kigochen-web/blob/master/images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-13%20%E4%B8%8B%E5%8D%8811.16.35.png"
