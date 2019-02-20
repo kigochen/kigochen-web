@@ -8,9 +8,10 @@ tags:
 - SQL
 ---
 
-## This are notes for basic SQL. 
+## This are some notes for mysql. 
 
 <!--more-->
+
 
 
 ## optimize table
