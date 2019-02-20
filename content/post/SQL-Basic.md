@@ -32,7 +32,7 @@ thumbnailImage: //media.licdn.com/media/AAEAAQAAAAAAAAB1AAAAJDg1Y2YyNTVjLTJiMjgt
         - **SELECT**, INSERT, DELETE, UPDATE
     
     
-## DML Syntax:tada:
+## DML Syntax
 
 ### SELECT - extracts data from a database
 
