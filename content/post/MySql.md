@@ -1,6 +1,6 @@
 ---
-title: MySQL Note
-date: 2019-02-20
+title: "MySQL Note"
+date: 2019-02-20T22:03:28+08:00
 categories:
 - Notes
 - SQL
@@ -8,10 +8,9 @@ tags:
 - SQL
 ---
 
-## This are some notes for mysql. 
+## This are notes for basic SQL. 
 
 <!--more-->
-
 
 
 ## optimize table
