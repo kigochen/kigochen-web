@@ -7,7 +7,7 @@ categories:
 tags:
 - SQL
 thumbnailImagePosition: left
-thumbnailImage: https://media.licdn.com/media/AAEAAQAAAAAAAAB1AAAAJDg1Y2YyNTVjLTJiMjgtNDc3ZS1hYmRjLTZkOTMzZGMxNDRiNw.jpg =700x200
+thumbnailImage: //media.licdn.com/media/AAEAAQAAAAAAAAB1AAAAJDg1Y2YyNTVjLTJiMjgtNDc3ZS1hYmRjLTZkOTMzZGMxNDRiNw.jpg =700x200
 ---
 
 ## This are some notes for basic SQL. 
