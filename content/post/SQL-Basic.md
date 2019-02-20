@@ -37,8 +37,8 @@ thumbnailImage: //media.licdn.com/media/AAEAAQAAAAAAAAB1AAAAJDg1Y2YyNTVjLTJiMjgt
 ### SELECT - extracts data from a database
 
 * SELECT
-
 > select the column names of the table you want from table
+
 ```sql=
 SELECT table_name, owner FROM all_tables;
 ```
