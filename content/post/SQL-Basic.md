@@ -10,17 +10,25 @@ thumbnailImagePosition: left
 thumbnailImage: https://media.licdn.com/media/AAEAAQAAAAAAAAB1AAAAJDg1Y2YyNTVjLTJiMjgtNDc3ZS1hYmRjLTZkOTMzZGMxNDRiNw.jpg =700x200
 ---
 
+## This are some notes for basic SQL. 
 
+<!--more-->
 
-## DBMS:tada:
+## DBMS
 ![](https://i.imgur.com/nJble7Z.png)
 - DBMS: Oracle, MySQL, PostgresSQL, Ms SQL server...etc.
+
 - SQL: 用以操作 DBMS 的系統的語言 (**Structured Query Language**)
+
     - DDL(Data Definition Language)
         - 用來定義資料庫/表格概念和實體階層的內容與其存在關係，也就是描述資料庫中的資料，包括欄位、型態和資料結構等等。
+
         - CREATE, DROP, ALTER
+
     - DML(Data Manipulation Language):
+
         - 允許使用者存取或是處理資料庫中的資料
+
         - **SELECT**, INSERT, DELETE, UPDATE
     
     
@@ -29,6 +37,7 @@ thumbnailImage: https://media.licdn.com/media/AAEAAQAAAAAAAAB1AAAAJDg1Y2YyNTVjLT
 ### SELECT - extracts data from a database
 
 * SELECT
+
 > select the column names of the table you want from table
 ```sql=
 SELECT table_name, owner FROM all_tables;
@@ -37,6 +46,7 @@ SELECT table_name, owner FROM all_tables;
 SELECT * FROM all_tables;
 ```
 * SELECT DISTINCT
+
 > used to return only distinct result
 ```sql=
 SELECT cf_value_11 FROM SPACE.T_CHANNEL_DEF
@@ -50,6 +60,7 @@ SELECT COUNT(DISTINCT cf_value_11) FROM SPACE.T_CHANNEL_DEF
 ;
 ```
 * WHERE
+
 > Used to extract only those records that fulfill a specified condition
 ```sql=
 SELECT column1, column2, ...
@@ -60,27 +71,24 @@ WHERE condition;
 SELECT DISTINCT CH_ID, cf_value_11 AS AREA FROM SPACE.T_CHANNEL_DEF
 WHERE cf_value_11 = 'PHOTO'
 ;
-
 SELECT CH_ID, cf_value_11 AS AREA FROM SPACE.T_CHANNEL_DEF
 WHERE CH_ID = '142'
 ;
-
 SELECT * FROM SPACE.T_CHANNEL_DEF
 WHERE cf_value_11 = 'PHOTO'
 AND (CH_ID=142 OR CH_ID=143)
 ;
-
 SELECT DISTINCT cf_value_11 AS AREA FROM SPACE.T_CHANNEL_DEF
 WHERE NOT cf_value_11 = 'PHOTO'
 ;
-
 SELECT DISTINCT cf_value_11 AS AREA FROM SPACE.T_CHANNEL_DEF
 WHERE cf_value_11 IS NOT NULL
 ;
 ```
 
 
-| Operator | Description|
+
+| Operator | Description| 
 | -------- | -------- | -------- |
 | =	| Equal|
 | <> |	Not equal. Note: In some versions of SQL this operator may be written as **!=**|
@@ -92,8 +100,11 @@ WHERE cf_value_11 IS NOT NULL
 | LIKE|	Search for a pattern|
 | IN|	To specify multiple possible values for a column|
 
+
 * ORDER BY
+
 > The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
+
 ```sql=
 SELECT column1, column2, ...
 FROM table_name
@@ -110,7 +121,9 @@ WHERE cf_value_11 IS NOT NULL
 ORDER BY ch_id DESC, cf_value_11 ASC
 ;
 ```
+
 * SELECT LIMIT
+
 > used to specify the number of records to return.
 
 ANSI
@@ -127,6 +140,7 @@ WHERE ROWNUM <= 10
 ```
 
 * FUNCTIONS
+
     - [oracle functions](https://docs.oracle.com/cd/B19306_01/server.102/b14200/functions001.htm)
 
 ```sql=
@@ -135,6 +149,7 @@ FROM Products;
 ```
 
 * LIKE
+
 > Used in a WHERE clause to search for a specified pattern in a column
 
     % : The percent sign represents zero, one, or multiple characters
@@ -146,7 +161,6 @@ WHERE cf_value_11 IS NOT NULL
 AND CH_NAME LIKE '5030%'
 ORDER BY ch_id DESC, cf_value_11 ASC
 ;
-
 SELECT ch_id, ch_name, cf_value_11 AS AREA FROM SPACE.T_CHANNEL_DEF
 WHERE cf_value_11 IS NOT NULL
 AND CH_NAME LIKE '5030-_2%'
@@ -155,6 +169,7 @@ ORDER BY ch_id DESC, cf_value_11 ASC
 ```
 
 * IN
+
 > Allows you to specify multiple values in a WHERE clause
 
 ```sql=
@@ -162,7 +177,6 @@ SELECT ch_id, ch_name, cf_value_11 AS AREA FROM SPACE.T_CHANNEL_DEF
 WHERE cf_value_11 IS NOT NULL
 AND ch_id IN (5566,9527,9487,8763)
 ;
-
 SELECT ch_id, ch_name, cf_value_11 AS AREA FROM SPACE.T_CHANNEL_DEF
 WHERE ch_id IN (
 SELECT DISTINCT ch_id FROM SPACE.T_CHANNEL_DEF
@@ -276,7 +290,6 @@ GROUP BY cf_value_11
 ```
 
 * HAVING
-> 
 ```sql=
 SELECT COUNT(*), cf_value_11 AS AREA
 FROM SPACE.T_CHANNEL_DEF
@@ -296,39 +309,50 @@ HAVING COUNT(*) > 5566
 ORDER BY COUNT(*)
 ;
 ```
+
+
 ### UPDATE - updates data in a database
+
 ### DELETE - deletes data from a database
+
 ### INSERT INTO - inserts new data into a database
 
 
-## DML Syntax:tada:
+
+## DML Syntax
 
 ### CREATE DATABASE - creates a new database
+
 ### ALTER DATABASE - modifies a database
+
 ### CREATE TABLE - creates a new table
+
 ### ALTER TABLE - modifies a table
+
 ### DROP TABLE - deletes a table
+
 ### CREATE INDEX - creates an index (search key)
+
 ### DROP INDEX - deletes an index
 
 
 
-# Connect DB Setting:tada:
-### DBeaver Setting
-* Install file path
-> \\tawbddev01\Shared\0.Meets-up\0.SQL\Tools
 
+# Connect DB Setting
 
 ### R Connect server and Get data
 
 * Oracle
+
 ```R=
 library(RODBC)
 con <- odbcConnect("DD1", uid="rquser", pwd="rquser", rows_at_time = 500)
 d <- sqlQuery(con, "select * from TEST_TABLE")
 close(con)
 ```
+
 * Teradata
+
 ```R=
 options(java.parameters = "-Xmx8048m")
 options(java.home="********") #set path for loading jvm.dll
