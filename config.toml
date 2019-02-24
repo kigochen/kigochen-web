@@ -86,7 +86,7 @@ canonifyurls = true
 weight = 2
 identifier = "Resume"
 name = "Resume"
-pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
+pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
 url = "https://www.cakeresume.com/s--BHMTIrGC9JoqX5kBfMfuyg--/kigo-chen"
 #[[menu.links]]
   #weight = 2
